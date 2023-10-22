@@ -1,0 +1,51 @@
+<?php
+/** @var object $model */
+
+use JonathanRayln\UdemyClone\Http\Form\Form;
+
+echo '<pre>';
+print_r($model);
+echo '</pre>';
+?>
+
+<div class="container-tight py-4 my-auto">
+    <div class="text-center mb-4">
+        <a href="<?= url() ?>" class="navbar-brand navbar-brand-autodark">
+            <img src="<?= asset_url('vendor/Tabler/static/logo.svg') ?>" width="110" height="32" alt="Tabler" class="navbar-brand-image">
+        </a>
+    </div>
+    <?php $form = Form::start('card card-md', '', 'put'); ?>
+    <div class="card-body">
+        <h2 class="card-title text-center mb-4">Create new account</h2>
+        <div class="mb-3">
+            <?= $form->label($model, 'first_name') ?>
+            <?= $form->input($model, 'first_name', 'Enter first name') ?>
+        </div>
+        <div class="mb-3">
+            <?= $form->label($model, 'last_name') ?>
+            <?= $form->input($model, 'last_name', 'Enter last name') ?>
+        </div>
+        <div class="mb-3">
+            <?= $form->label($model, 'email') ?>
+            <?= $form->input($model, 'email', 'your@email.com') ?>
+        </div>
+        <div class="mb-3">
+            <?= $form->label($model, 'password') ?>
+            <?= $form->input($model, 'password', 'Password')->typePassword() ?>
+        </div>
+        <div class="mb-3">
+            <?= $form->label($model, 'confirm_password') ?>
+            <?= $form->input($model, 'confirm_password', 'Confirm password')->typePassword() ?>
+        </div>
+        <div class="mb-3">
+            <?= $form->checkbox($model, 'terms', 1, 'I agree to the <a href="#">terms &amp; conditions</a>.') ?>
+        </div>
+        <div class="form-footer">
+            <button type="submit" class="btn btn-primary w-100">Create new account</button>
+        </div>
+    </div>
+    <?php Form::end() ?>
+    <div class="text-center text-secondary mt-3">
+        Already have account? <a href="<?= url('login') ?>" tabindex="-1">Sign in</a>
+    </div>
+</div>

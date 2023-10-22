@@ -1,0 +1,23 @@
+{
+  "name": "jrayln/udemy-clone",
+  "description": "A simple PHP project for practicing.",
+  "type": "project",
+  "homepage": "https://youtube.com/playlist?list=PLY3j36HMSHNWNbNp-rOwI6vFw7TiPfsSO&si=poVL7TAbdR1lFRFF",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "JonathanRayln\\UdemyClone\\": "app/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Michael Morales",
+      "email": "mike@michaelmorales.org"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "vlucas/phpdotenv": "^5.5@dev",
+    "ext-pdo": "*"
+  }
+}
